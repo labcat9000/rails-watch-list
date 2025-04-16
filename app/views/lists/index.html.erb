@@ -1,0 +1,11 @@
+<h1 class="m-2">Lists</h1>
+<br>
+<%= link_to "New list", new_list_path, :class => "btn btn-primary p-1 m-2" %>
+<br>
+<ul class="list-group">
+  <% @lists.each do |list| %>
+    <ul class="list-group-item">
+      <%= link_to list.name, list_path(list) %>
+    </ul>
+  <% end %>
+</ul>

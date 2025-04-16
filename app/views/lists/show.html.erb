@@ -1,0 +1,13 @@
+<div class="m-2">
+  <h1><%= @list.name %></h1>
+</div>
+
+<ul class="list-group">
+  <% @movies.each do |movie| %>
+    <ul class="list-group-item">
+      <%= link_to movie.title, movie_path(movie) %>
+    </ul>
+  <% end %>
+</ul>
+<hr>
+<%= link_to "Back to all lists", lists_path, :class => "btn btn-primary p-1 m-2" %>
